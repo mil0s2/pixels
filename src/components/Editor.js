@@ -11,7 +11,18 @@ const Editor = () => {
   const [buttonText, setButtonText] = useState('start drawing');
   const [selectedColor, setColor] = useState('#f44336');
 
+  const heightAlert = 'Height must be set between 1 and 72';
+  const widthAlert = 'Width must be set between 1 and 72';
+
   const handleButtonClick = () => {
+    if (panelHeight < 1 || panelHeight > 72) {
+      alert(heightAlert);
+      return;
+    }
+    if (panelWidth < 1 || panelWidth > 72) {
+      alert(widthAlert);
+      return;
+    }
     setHideOptions(!hideOptions);
     setHideDrawingPanel(!hideDrawingPanel);
 
@@ -33,6 +44,8 @@ const Editor = () => {
           <div className="option">
             <input
               type="number"
+              min="1"
+              max="72"
               className="panelInput"
               defaultValue={panelWidth}
               onChange={(e) => {
@@ -44,6 +57,8 @@ const Editor = () => {
           <div className="option">
             <input
               type="number"
+              min="1"
+              max="72"
               className="panelInput"
               defaultValue={panelHeight}
               onChange={(e) => {

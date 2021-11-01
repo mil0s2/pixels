@@ -3,8 +3,8 @@
 #editor {
   border: 1px solid $red;
   border-radius: 0.25rem;
-  padding: 1rem 4rem 2rem 4rem;
-  margin-top: 2rem;
+  padding: 1rem 2rem 2rem 4rem;
+  margin: 2rem 1rem;
 
   display: flex;
   flex-direction: column;
@@ -57,13 +57,26 @@
     text-transform: uppercase;
     border: 1px solid transparent;
     transition: background-color 0.2s ease-in-out;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     &:hover {
       cursor: pointer;
       background-color: transparent;
       border-color: $red;
     }
+  }
+
+  .buttonSubmit {
+    cursor: pointer;
+    font-size: 1.25rem;
+    background-color: transparent;
+    color: $white;
+    padding: 1rem 3rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    border: 1px solid $red;
+    transition: background-color 0.2s ease-in-out;
+    margin-bottom: 1rem;
   }
 
   .circle-picker {

@@ -7,3 +7,17 @@
 #pixels {
   margin-bottom: 2rem;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+
+.nameInput {
+  height: 2rem;
+  width: 98%;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
